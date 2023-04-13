@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5=m!ym9+(b)ry!@32hc5en4u%kyefv%do^gsuw+u)wf5x91)84
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolio-6q55.onrender.com']
+ALLOWED_HOSTS = ['*','portfolio-6q55.onrender.com']
 
 
 # Application definition
@@ -50,13 +50,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
-import os
-SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
+        'DIRS': ['mybio/templates\mybio'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
