@@ -1,0 +1,31 @@
+<style>
+    .container{
+    display: flex;
+    align-items: stretch;
+    justify-content: start;
+    flex-direction: row;
+    justify-content: space-evenly;
+    }
+  </style>
+<h1 style="color:white;
+            text-align: center;
+            font-family: serif;
+            flex-direction: row;
+            padding: 10px;">My Project</h1>
+  <div class="container">
+
+<!-- <div style="height: 200px; width: 200px; background-color: gold;"></div> -->
+{% for project in projects %}
+    <div class="card" style="width: 20em; ;
+    " >
+        <img class="card-img-top" src="../../static/img/logo1.JPG" />
+        <div class="card-body" >
+            <h4 style="text-align: center;">{{project.project_title}}</h4>
+            <p>{{project.project_abstract}}</p>
+            <p><b>Tech Stack: </b>{{project.project_tech}}</p>
+            <p><b>Programing Background: </b>{{project.project_programming_background}}</p>
+            <a href="{{project.project_link}}">{{project.project_link}}</a>
+        </div>
+</div>
+{% endfor %}
+  </div>

@@ -30,13 +30,13 @@ ALLOWED_HOSTS = ['*','portfolio-6q55.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
-    "mybio",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mybio'
 ]
 
 MIDDLEWARE = [
@@ -50,8 +50,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
-import os
-SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+
 
 TEMPLATES = [
     {

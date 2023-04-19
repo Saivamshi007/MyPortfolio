@@ -1,12 +1,13 @@
-{% extends "base.html" %} {% block page_content%}
+{% extends "base.html" %}
+{% block page_content%}
+
+
 
 <div style="background-color: black">
   <div
     style="
       color: white;
-      padding-top: 5%;
-      padding-right: 5%;
-      padding-bottom: 20%;
+      padding-top: 3%;
       font-family: 'Brush Script MT', cursive;
     "
   >
@@ -207,5 +208,25 @@
 
   </div>
   </div>
+
+
+
+
+    {% include "./projects.html" with projects=projects %}
+
+    <div style="padding: 10px 10px 10px 10px;">
+
+    {% include "./accomplishments.html" %}
+
+    {% include "./skills.html" with colors=color %}
+
+  </div>
+
+
+ 
+
+
+
   {% endblock %}
 </div>
+

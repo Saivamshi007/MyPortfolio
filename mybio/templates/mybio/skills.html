@@ -1,0 +1,6 @@
+<h4 style="color: white;font-family: serif;text-align: center; ">Skills</h4>
+{% for in_col in skills %}
+<div class="card" style="background-color:'{{in_col.color}}';height: 50px;width: 50px;" >
+    <p>{{in_col.skill}}</p>
+</div>
+{% endfor %}
