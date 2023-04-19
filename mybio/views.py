@@ -8,7 +8,18 @@ def index(request):
     project=ProjectTable.objects.all()
     context={
         "projects":project,
-        "skills":[{"color":"blue","skill":"Java"},{"color":"red","skill":"Python"}]
+        "skills":[{"color":tuple(np.random.choice(range(256), size=3)),"skill":"Python"},
+                  {"color":tuple(np.random.choice(range(256), size=3)),"skill":"Django REST FrameWork"},
+                  {"color":tuple(np.random.choice(range(256), size=3)),"skill":"PySpark"},
+                  {"color":tuple(np.random.choice(range(256), size=3)),"skill":"Tableau"},
+                  {"color":tuple(np.random.choice(range(256), size=3)),"skill":"NLP"},
+                  {"color":tuple(np.random.choice(range(256), size=3)),"skill":"AI"},
+                  {"color":tuple(np.random.choice(range(256), size=3)),"skill":"ML"},
+                  {"color":tuple(np.random.choice(range(256), size=3)),"skill":"TensorFlow"},
+                  {"color":tuple(np.random.choice(range(256), size=3)),"skill":"Java"},
+                  {"color":tuple(np.random.choice(range(256), size=3)),"skill":"JavaScript"},
+                  
+                  ]
 
         # 'skils':['color''Python','Django REST FrameWork','PySpark',
         #          'Tableau','NLP','AI','ML','Oracle','JavaScript','Java'],

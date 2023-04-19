@@ -4,3 +4,4 @@ gunicorn
 pytz
 sqlparse
 whitenoise
+numpy

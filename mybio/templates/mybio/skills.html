@@ -1,6 +1,35 @@
+<style>
+     .box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-left: 10%;
+        padding-right: 10%;
+
+
+    }
+    .box>* {
+        flex: 1 1 160px;
+    }
+</style>
 <h4 style="color: white;font-family: serif;text-align: center; ">Skills</h4>
+<div class="box">
 {% for in_col in skills %}
-<div class="card" style="background-color:'{{in_col.color}}';height: 50px;width: 50px;" >
-    <p>{{in_col.skill}}</p>
+<div class="card" style="
+width: 100em;
+justify-content: center;
+text-align: center;
+border-radius:10px 10px 10px 10px ;
+background-color:rgb{{in_col.color}};
+
+">
+    <p style="color: white;
+            font-weight: bolder;
+            text-align: center;
+            justify-content: center;
+
+        ">{{in_col.skill}}</p>
 </div>
 {% endfor %}
+
+</div>
