@@ -1,4 +1,5 @@
 Django
 numpy
 Pillow
-sqlparse
+sqlparsegunicorn -w 1 portfolio.wsgi:application
+gunicorn
