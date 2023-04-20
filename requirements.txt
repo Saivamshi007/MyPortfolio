@@ -2,4 +2,3 @@ Django
 numpy
 Pillow
 sqlparsegunicorn -w 1 portfolio.wsgi:application
-gunicorn
