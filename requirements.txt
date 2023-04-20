@@ -1,8 +1,6 @@
-asgiref
-Django
-gunicorn
-pytz
-sqlparse
-whitenoise
-numpy
-Pillow
+asgiref==3.6.0
+Django==4.2
+numpy==1.24.2
+Pillow==9.5.0
+sqlparse==0.4.4
+tzdata==2023.3
