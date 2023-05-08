@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import MessageTable,ProjectTable
+from .models import TableforMessage,ProjectTable
 
-admin.site.register([MessageTable,ProjectTable])
+admin.site.register([TableforMessage,ProjectTable])
 
 # Register your models here.

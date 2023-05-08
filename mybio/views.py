@@ -1,12 +1,16 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.template import loader
-from mybio.models import ProjectTable
+from mybio.models import ProjectTable,TableforMessage
 import numpy as np
+from .forms import MessageTable
+from django.views.decorators.csrf import csrf_protect,csrf_exempt
 
 def index(request):
     project=ProjectTable.objects.all()
+    form=MessageTable()
     context={
+        'form':form,
         "projects":project,
         "skills":[{"color":tuple(np.random.choice(range(256), size=3)),"skill":"Python"},
                   {"color":tuple(np.random.choice(range(256), size=3)),"skill":"Django REST FrameWork"},
@@ -28,11 +32,16 @@ def index(request):
     template=loader.get_template('index.html')
     return HttpResponse(template.render(context))
 
-def projects():
-    project=ProjectTable.objects.all()
-    context={
-        "projects":project
-    }
-    template=loader.get_template('projects.html')
+@csrf_exempt
+def backTmsg(request):
 
-    return HttpResponse(template.render(context))
+    if request.method=='POST':
+        msg=TableforMessage(message=request.POST.get("message"))
+        msg.save()
+        return HttpResponseRedirect('/mybio/thank_you/')
+
+
+def thank_you(request):
+    con={}
+    temple=loader.get_template('thank_you.html')
+    return HttpResponse(temple.render())

@@ -1,8 +1,9 @@
 from django.db import models
 from django.utils import timezone
-class MessageTable(models.Model):
+class TableforMessage(models.Model):
     message=models.TextField(max_length=20000)
     datetime=models.DateTimeField(default=timezone.now())
+    # messagelat=models.TextField(default="sai")
 
     def __str__(self) :
         return self.message +" "+str(self.datetime)

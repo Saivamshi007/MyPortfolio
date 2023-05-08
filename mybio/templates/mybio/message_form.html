@@ -1,0 +1,14 @@
+<div style="text-align: center;
+            color: white;
+            margin: 10px;
+">
+<form action="/mybio/backTmsg/" method="POST">
+    {% csrf_token %}
+    <h3 style="color: white;font-family: serif;"
+    >Thanks for visiting my website</h3>
+    {{form}}
+    <br>
+    <input class="btn btn-success" style="margin: 10px; width: 100px;" type="submit"></input>
+</br>
+</form>
+</div>
